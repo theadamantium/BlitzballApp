@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blitzball Player Stats</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Blitzball Player Statistics</h1>
+
+    <!-- Player Search Form -->
+    <form method="GET" action="/">
+        <input type="text" name="search" placeholder="Search by player name...">
+        <button type="submit">Search</button>
+    </form>
+
+    <!-- Players Table -->
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Key Techniques</th>
+                <th>Location</th>
+                <th>Starting Team</th>
+                <th>Statistics</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for player in players %}
+            <tr>
+                <td>{{ player.name }}</td>
+                <td>{{ player.key_techniques }}</td>
+                <td>{{ player.location }}</td>
+                <td>{{ player.starting_team }}</td>
+                <td>{{ player.stats }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <!-- Team Builder Section -->
+    <h2>Team Builder</h2>
+    <div id="team-builder">
+        <!-- Drag-and-drop player selection (to be implemented) -->
+    </div>
+</body>
+</html>

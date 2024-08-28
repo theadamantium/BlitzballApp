@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Player</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Edit Player</h1>
+
+    <!-- Player Form -->
+    <form method="POST" action="/edit_player">
+        <input type="hidden" name="player_id" value="{{ player_id }}">
+        
+        <label for="name">Player Name:</label>
+        <input type="text" id="name" name="name" required value="{{ name }}">
+
+        <label for="key_techniques">Key Techniques:</label>
+        <input type="text" id="key_techniques" name="key_techniques" value="{{ key_techniques }}">
+
+        <label for="location">Location:</label>
+        <input type="text" id="location" name="location" value="{{ location }}">
+
+        <label for="starting_team">Starting Team:</label>
+        <input type="text" id="starting_team" name="starting_team" value="{{ starting_team }}">
+
+        <h2>Player Statistics</h2>
+        {% for level in range(1, 100, 10) %}
+            <h3>Level {{ level }}</h3>
+            <label for="stats">Stats (HP, Speed, Endurance, Attack, Pass, Block, Shot, Catch):</label>
+            <input type="text" id="stats" name="stats[]" placeholder="e.g., 100, 63, 7, 10, 7, 5, 1, 1">
+            <input type="hidden" name="levels[]" value="{{ level }}">
+        {% endfor %}
+
+        <button type="submit">Save Player</button>
+    </form>
+</body>
+</html>

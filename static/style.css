@@ -29,6 +29,45 @@ th {
     background-color: #f2f2f2;
 }
 
+/* Styles for the nested statistics table */
+.stats-table {
+    width: 100%;
+    margin-top: 10px;
+    border-collapse: collapse;
+}
+
+.stats-table th, .stats-table td {
+    padding: 8px;  /* Slightly increased padding for better visibility */
+    text-align: center; /* Centering the text */
+    border: 1px solid #888; /* Adding a distinct border color */
+}
+
+.stats-table th {
+    background-color: #e0e0e0; /* Slightly darker header background for contrast */
+    border: 1px solid #888; /* Adding borders to headers as well */
+}
+
+.stats-table td {
+    background-color: #fafafa;
+}
+
+.stats-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Add a subtle shadow and space around the nested table for visual separation */
+.stats-table {
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 10px 0;
+}
+
+.key-techniques {
+    padding: 5px;
+    line-height: 1.6; /* Adjust line height for better readability */
+}
+
+
 form {
     margin-top: 20px;
 }

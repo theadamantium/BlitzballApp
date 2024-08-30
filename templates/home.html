@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blitzball Player Stats</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
     <h1>Blitzball Player Statistics</h1>
-
+    {% include '/navbar.html' %} <!-- Include the navigation menu -->
+    
     <!-- Player Search Form -->
     <form method="GET" action="/">
         <input type="text" name="search" placeholder="Search by player name...">
@@ -20,20 +21,61 @@
         <thead>
             <tr>
                 <th>Name</th>
-                <th>Key Techniques</th>
-                <th>Location</th>
-                <th>Starting Team</th>
                 <th>Statistics</th>
+                <th>Starting Team</th>
+                <th>Location</th>
+                <th>Key Techniques</th>
             </tr>
         </thead>
         <tbody>
             {% for player in players %}
             <tr>
                 <td>{{ player.name }}</td>
-                <td>{{ player.key_techniques }}</td>
-                <td>{{ player.location }}</td>
+                <td>
+                    <!-- Nested Statistics Table -->
+                    <table class="stats-table">
+                        <thead>
+                            <tr>
+                                <th></th>  <!-- First column for stat names -->
+                                {% for level in [1, 10, 20, 30, 40, 50, 60, 70, 80, 90, 99] %}
+                                    <th>{{ level }}</th>
+                                {% endfor %}
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- List of stats to display -->
+                            {% set stat_names = ['HP', 'SP', 'EN', 'AT', 'PA', 'BL', 'SH', 'CA'] %}
+                            
+                            {% for stat_name in stat_names %}
+                                <tr>
+                                    <th>{{ stat_name }}</th>  <!-- Stat name column -->
+                                    {% for level in [1, 10, 20, 30, 40, 50, 60, 70, 80, 90, 99] %}
+                                        <td>
+                                            {{ player.stats_dict[stat_name][level] if player.stats_dict[stat_name].get(level) else '' }}
+                                        </td>
+                                    {% endfor %}
+                                </tr>
+                            {% endfor %}
+                            
+                            <!-- Add an extra row if needed to make it 9 rows -->
+                            {% for i in range(8 - stat_names|length) %}
+                                <tr>
+                                    <td></td>
+                                    {% for j in range(11) %}
+                                        <td></td>
+                                    {% endfor %}
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </td>
                 <td>{{ player.starting_team }}</td>
-                <td>{{ player.stats }}</td>
+                <td>{{ player.location }}</td>
+                <td class="key-techniques">
+                    {% for technique in player.key_techniques.split(',') %}
+                        {{ technique.strip() }}<br>
+                    {% endfor %}
+                </td>
             </tr>
             {% endfor %}
         </tbody>

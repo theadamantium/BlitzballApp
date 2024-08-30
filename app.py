@@ -22,20 +22,53 @@ def home():
     # Retrieve players and their statistics
     cursor.execute("""
         SELECT players.player_id, players.name, players.key_techniques, players.location, players.starting_team,
-               GROUP_CONCAT(CONCAT(player_stats.level, ': ', 'HP: ', player_stats.hp, ', SP: ', player_stats.speed, 
-                                  ', EN: ', player_stats.endurance, ', AT: ', player_stats.attack, 
-                                  ', PA: ', player_stats.pass, ', BL: ', player_stats.block, 
-                                  ', SH: ', player_stats.shot, ', CA: ', player_stats.catch) 
-                           ORDER BY player_stats.level ASC SEPARATOR ' | ') AS stats
+               player_stats.level, player_stats.hp, player_stats.speed, player_stats.endurance, player_stats.attack,
+               player_stats.pass, player_stats.block, player_stats.shot, player_stats.catch
         FROM players
         LEFT JOIN player_stats ON players.player_id = player_stats.player_id
-        GROUP BY players.player_id
+        ORDER BY players.player_id, player_stats.level
     """)
-    players = cursor.fetchall()
+    players_raw = cursor.fetchall()
+
+    # Preparing data structure for stats_table
+    players = {}
+    for player in players_raw:
+        player_id = player['player_id']
+        if player_id not in players:
+            # Initialize the player's data
+            players[player_id] = {
+                'player_id': player_id,
+                'name': player['name'],
+                'key_techniques': player['key_techniques'],
+                'location': player['location'],
+                'starting_team': player['starting_team'],
+                'stats_dict': {
+                    'HP': {lvl: '' for lvl in [1, 10, 20, 30, 40, 50, 60, 70, 80, 90, 99]},
+                    'SP': {lvl: '' for lvl in [1, 10, 20, 30, 40, 50, 60, 70, 80, 90, 99]},
+                    'EN': {lvl: '' for lvl in [1, 10, 20, 30, 40, 50, 60, 70, 80, 90, 99]},
+                    'AT': {lvl: '' for lvl in [1, 10, 20, 30, 40, 50, 60, 70, 80, 90, 99]},
+                    'PA': {lvl: '' for lvl in [1, 10, 20, 30, 40, 50, 60, 70, 80, 90, 99]},
+                    'BL': {lvl: '' for lvl in [1, 10, 20, 30, 40, 50, 60, 70, 80, 90, 99]},
+                    'SH': {lvl: '' for lvl in [1, 10, 20, 30, 40, 50, 60, 70, 80, 90, 99]},
+                    'CA': {lvl: '' for lvl in [1, 10, 20, 30, 40, 50, 60, 70, 80, 90, 99]},
+                }
+            }
+
+        # Fill in the available stats
+        if player['level'] in players[player_id]['stats_dict']['HP']:  # Ensure the level exists in the dictionary
+            stats_dict = players[player_id]['stats_dict']
+            stats_dict['HP'][player['level']] = player['hp'] if player['hp'] is not None else ''
+            stats_dict['SP'][player['level']] = player['speed'] if player['speed'] is not None else ''
+            stats_dict['EN'][player['level']] = player['endurance'] if player['endurance'] is not None else ''
+            stats_dict['AT'][player['level']] = player['attack'] if player['attack'] is not None else ''
+            stats_dict['PA'][player['level']] = player['pass'] if player['pass'] is not None else ''
+            stats_dict['BL'][player['level']] = player['block'] if player['block'] is not None else ''
+            stats_dict['SH'][player['level']] = player['shot'] if player['shot'] is not None else ''
+            stats_dict['CA'][player['level']] = player['catch'] if player['catch'] is not None else ''
 
     cursor.close()
     conn.close()
-    return render_template('home.html', players=players)
+    return render_template('home.html', players=list(players.values()))  # Convert to list for Jinja2 compatibility
 
 # Route for the edit player page
 @app.route('/edit_player', methods=['GET', 'POST'])
@@ -44,7 +77,6 @@ def edit_player():
     cursor = conn.cursor(dictionary=True)
 
     if request.method == 'POST':
-        # Handle form submission to add/edit player
         player_id = request.form.get('player_id')
         name = request.form['name']
         key_techniques = request.form['key_techniques']
@@ -86,9 +118,51 @@ def edit_player():
         conn.commit()
         return redirect('/')
 
+    # Handle GET requests to display forms
+    cursor.execute("SELECT player_id, name FROM players")
+    players = cursor.fetchall()
+    
+    return render_template('edit_player.html', players=players)
+
+# Route to get player data for editing
+@app.route('/get_player_data/<int:player_id>')
+def get_player_data(player_id):
+    conn = get_db_connection()
+    cursor = conn.cursor(dictionary=True)
+
+    cursor.execute("""
+        SELECT players.player_id, players.name, players.key_techniques, players.location, players.starting_team,
+               player_stats.level, player_stats.hp, player_stats.speed, player_stats.endurance, player_stats.attack,
+               player_stats.pass, player_stats.block, player_stats.shot, player_stats.catch
+        FROM players
+        LEFT JOIN player_stats ON players.player_id = player_stats.player_id
+        WHERE players.player_id = %s
+    """, (player_id,))
+    player_data = cursor.fetchall()
+
+    if not player_data:
+        return jsonify({'error': 'Player not found'}), 404
+
+    player = player_data[0]
+    stats = [
+        {'level': player['level'], 'values': [
+            player['hp'], player['speed'], player['endurance'], player['attack'],
+            player['pass'], player['block'], player['shot'], player['catch']
+        ]}
+    ]
+    
+    response = {
+        'player_id': player['player_id'],
+        'name': player['name'],
+        'key_techniques': player['key_techniques'],
+        'location': player['location'],
+        'starting_team': player['starting_team'],
+        'stats': stats
+    }
+
     cursor.close()
     conn.close()
-    return render_template('edit_player.html')
+    return jsonify(response)
 
 # Route for the analysis page
 @app.route('/analysis')

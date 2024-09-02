@@ -1,5 +1,6 @@
-from flask import Flask, render_template, request, redirect
+from flask import Flask, render_template, request, redirect, url_for, jsonify
 import mysql.connector
+import config  # Import the config file to access credentials
 
 app = Flask(__name__)
 
@@ -7,8 +8,8 @@ app = Flask(__name__)
 def get_db_connection():
     connection = mysql.connector.connect(
         host="localhost",
-        user="root",       # Replace with your MySQL username
-        password="tK9NdHocRAHyr8xasKBm",   # Replace with your MySQL password
+        user=config.DB_USER,       # MySQL username from config file
+        password=config.DB_PASSWORD,  # MySQL password from config file
         database="blitzball_db"
     )
     return connection
@@ -39,7 +40,7 @@ def home():
             players[player_id] = {
                 'player_id': player_id,
                 'name': player['name'],
-                'key_techniques': player['key_techniques'],
+                # 'key_techniques': player['key_techniques'],
                 'location': player['location'],
                 'starting_team': player['starting_team'],
                 'stats_dict': {
@@ -124,45 +125,62 @@ def edit_player():
     
     return render_template('edit_player.html', players=players)
 
-# Route to get player data for editing
-@app.route('/get_player_data/<int:player_id>')
+@app.route('/get_player_data/<int:player_id>', methods=['GET'])
 def get_player_data(player_id):
     conn = get_db_connection()
     cursor = conn.cursor(dictionary=True)
 
+    # Fetch player details
     cursor.execute("""
-        SELECT players.player_id, players.name, players.key_techniques, players.location, players.starting_team,
-               player_stats.level, player_stats.hp, player_stats.speed, player_stats.endurance, player_stats.attack,
-               player_stats.pass, player_stats.block, player_stats.shot, player_stats.catch
+        SELECT player_id, name, key_techniques, location, starting_team
         FROM players
-        LEFT JOIN player_stats ON players.player_id = player_stats.player_id
-        WHERE players.player_id = %s
+        WHERE player_id = %s
     """, (player_id,))
-    player_data = cursor.fetchall()
+    player = cursor.fetchone()
 
-    if not player_data:
+    if not player:
         return jsonify({'error': 'Player not found'}), 404
 
-    player = player_data[0]
-    stats = [
-        {'level': player['level'], 'values': [
-            player['hp'], player['speed'], player['endurance'], player['attack'],
-            player['pass'], player['block'], player['shot'], player['catch']
-        ]}
-    ]
-    
-    response = {
+    # Fetch player stats for all levels
+    cursor.execute("""
+        SELECT level, hp, speed, endurance, attack, pass, block, shot, catch
+        FROM player_stats
+        WHERE player_id = %s
+        ORDER BY level
+    """, (player_id,))
+    stats = cursor.fetchall()
+
+    # Prepare the stats in the desired format
+    stats_list = []
+    for stat in stats:
+        stats_list.append({
+            'level': stat['level'],
+            'values': [
+                stat['hp'] if stat['hp'] is not None else '',
+                stat['speed'] if stat['speed'] is not None else '',
+                stat['endurance'] if stat['endurance'] is not None else '',
+                stat['attack'] if stat['attack'] is not None else '',
+                stat['pass'] if stat['pass'] is not None else '',
+                stat['block'] if stat['block'] is not None else '',
+                stat['shot'] if stat['shot'] is not None else '',
+                stat['catch'] if stat['catch'] is not None else ''
+            ]
+        })
+
+    # Combine player info with stats
+    player_data = {
         'player_id': player['player_id'],
         'name': player['name'],
         'key_techniques': player['key_techniques'],
         'location': player['location'],
         'starting_team': player['starting_team'],
-        'stats': stats
+        'stats': stats_list
     }
 
     cursor.close()
     conn.close()
-    return jsonify(response)
+
+    return jsonify(player_data)
 
 # Route for the analysis page
 @app.route('/analysis')

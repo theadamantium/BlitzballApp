@@ -1,0 +1,12 @@
+# ignore venv directory
+/venv
+
+# ignore config file
+config.py
+
+
+# Logs and databases #
+######################
+*.log
+*.sql
+*.sqlite

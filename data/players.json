@@ -1,0 +1,436 @@
+{
+  "players": [
+    {
+      "name": "Tidus",
+      "location": "Luca -- Aurochs Locker room",
+      "starting_team": "Besaid Aurochs",
+      "key_techniques": ["Jecht Shot", "Sphere Shot", "Invisible Shot"],
+      "stats": [{"level": 1, "hp": 150, "speed": 70, "endurance": 8, "attack": 12, "pass": 9, "block": 6, "shot": 10, "catch": 2}]
+    },
+    {
+      "name": "Datto",
+      "location": "Luca -- Aurochs Locker room",
+      "starting_team": "Besaid Aurochs",
+      "key_techniques": ["Venom Tackle", "Wither Shot", "Tackle Slip"],
+      "stats": [{"level": 1, "hp": 120, "speed": 65, "endurance": 9, "attack": 8, "pass": 6, "block": 4, "shot": 5, "catch": 3}]
+    },
+    {
+      "name": "Letty",
+      "location": "Luca -- Aurochs Locker room",
+      "starting_team": "Besaid Aurochs",
+      "key_techniques": ["Nap Pass", "Venom Pass", "Golden Arm"],
+      "stats": [{"level": 1, "hp": 110, "speed": 60, "endurance": 6, "attack": 7, "pass": 12, "block": 5, "shot": 3, "catch": 1}]
+    },
+    {
+      "name": "Jassu",
+      "location": "Luca -- Aurochs Locker room",
+      "starting_team": "Besaid Aurochs",
+      "key_techniques": ["Wither Tackle", "Wither Tackle 2", "Nap Tackle 2"],
+      "stats": [
+        {"level": 1, "hp": 100, "speed": 63, "endurance": 7, "attack": 10, "pass": 7, "block": 5, "shot": 1, "catch": 1},
+        {"level": 10, "hp": 448, "speed": 63, "endurance": 13, "attack": 12, "pass": 10, "block": 7, "shot": 3, "catch": 3},
+        {"level": 20, "hp": 982, "speed": 64, "endurance": 19, "attack": 15, "pass": 14, "block": 10, "shot": 5, "catch": 5},
+        {"level": 30, "hp": 1672, "speed": 64, "endurance": 24, "attack": 18, "pass": 18, "block": 13, "shot": 7, "catch": 7},
+        {"level": 40, "hp": 2518, "speed": 65, "endurance": 28, "attack": 21, "pass": 23, "block": 17, "shot": 9, "catch": 9},
+        {"level": 50, "hp": 3520, "speed": 65, "endurance": 31, "attack": 25, "pass": 27, "block": 21, "shot": 11, "catch": 11},
+        {"level": 60, "hp": 4678, "speed": 66, "endurance": 34, "attack": 29, "pass": 32, "block": 25, "shot": 13, "catch": 13},
+        {"level": 70, "hp": 5992, "speed": 66, "endurance": 36, "attack": 34, "pass": 37, "block": 29, "shot": 15, "catch": 15},
+        {"level": 80, "hp": 7462, "speed": 67, "endurance": 37, "attack": 39, "pass": 42, "block": 34, "shot": 17, "catch": 17},
+        {"level": 90, "hp": 9088, "speed": 67, "endurance": 37, "attack": 45, "pass": 47, "block": 39, "shot": 19, "catch": 19},
+        {"level": 99, "hp": 9999, "speed": 67, "endurance": 37, "attack": 50, "pass": 52, "block": 44, "shot": 20, "catch": 20}
+      ]
+    },
+    {
+      "name": "Botta",
+      "location": "Luca -- Aurochs Locker room",
+      "starting_team": "Besaid Aurochs",
+      "key_techniques": ["Venom Tackle", "Wither Tackle", "Nap Tackle"],
+      "stats": [{"level": 1, "hp": 105, "speed": 55, "endurance": 5, "attack": 13, "pass": 4, "block": 8, "shot": 2, "catch": 1}]
+    },
+    {
+      "name": "Keepa",
+      "location": "Luca -- Aurochs Locker room",
+      "starting_team": "Besaid Aurochs",
+      "key_techniques": ["Grip Gloves", "Super Goalie", "Wither Shot"],
+      "stats": [{"level": 1, "hp": 180, "speed": 40, "endurance": 3, "attack": 4, "pass": 3, "block": 2, "shot": 1, "catch": 10}]
+    },
+    {
+      "name": "Bickson",
+      "location": "Luca -- Goers Locker room",
+      "starting_team": "Luca Goers",
+      "key_techniques": ["Nap Shot", "Venom Pass", "Volley Shot"],
+      "stats": [{"level": 1, "hp": 140, "speed": 60, "endurance": 7, "attack": 15, "pass": 10, "block": 5, "shot": 12, "catch": 3}]
+    },
+    {
+      "name": "Abus",
+      "location": "Luca -- Goers Locker room",
+      "starting_team": "Luca Goers",
+      "key_techniques": ["Nap Pass", "Venom Shot", "Golden Arm"],
+      "stats": [{"level": 1, "hp": 130, "speed": 62, "endurance": 6, "attack": 10, "pass": 8, "block": 6, "shot": 9, "catch": 2}]
+    },
+    {
+      "name": "Graav",
+      "location": "Luca -- Goers Locker room",
+      "starting_team": "Luca Goers",
+      "key_techniques": ["Volley Shot", "Anti-Drain", "Drain Tackle"],
+      "stats": [{"level": 1, "hp": 155, "speed": 68, "endurance": 10, "attack": 17, "pass": 7, "block": 12, "shot": 15, "catch": 4}]
+    },
+    {
+      "name": "Doram",
+      "location": "Luca -- Goers Locker room",
+      "starting_team": "Luca Goers",
+      "key_techniques": ["Wither Pass", "Anti-Nap", "Venom Tackle"],
+      "stats": [{"level": 1, "hp": 125, "speed": 55, "endurance": 5, "attack": 13, "pass": 6, "block": 10, "shot": 4, "catch": 2}]
+    },
+    {
+      "name": "Balgerda",
+      "location": "Luca -- Goers Locker room",
+      "starting_team": "Luca Goers",
+      "key_techniques": ["Nap Tackle", "Venom Pass", "Tackle Slip"],
+      "stats": [{"level": 1, "hp": 135, "speed": 58, "endurance": 8, "attack": 11, "pass": 5, "block": 7, "shot": 6, "catch": 1}]
+    },
+    {
+      "name": "Raudy",
+      "location": "Luca -- Goers Locker room",
+      "starting_team": "Luca Goers",
+      "key_techniques": ["Super Goalie", "Grip Gloves", "Wither Tackle"],
+      "stats": [{"level": 1, "hp": 200, "speed": 50, "endurance": 3, "attack": 8, "pass": 4, "block": 3, "shot": 2, "catch": 12}]
+    },
+    {
+      "name": "Larbeight",
+      "location": "Kilika -- Beasts Locker room",
+      "starting_team": "Kilika Beasts",
+      "key_techniques": ["Nap Shot", "Drain Tackle", "Anti-Wither"],
+      "stats": [{"level": 1, "hp": 145, "speed": 64, "endurance": 9, "attack": 14, "pass": 7, "block": 9, "shot": 13, "catch": 2}]
+    },
+    {
+      "name": "Isken",
+      "location": "Kilika -- Beasts Locker room",
+      "starting_team": "Kilika Beasts",
+      "key_techniques": ["Venom Shot", "Tackle Slip", "Volley Shot"],
+      "stats": [{"level": 1, "hp": 125, "speed": 60, "endurance": 7, "attack": 11, "pass": 9, "block": 4, "shot": 10, "catch": 3}]
+    },
+    {
+      "name": "Vuroja",
+      "location": "Kilika -- Beasts Locker room",
+      "starting_team": "Kilika Beasts",
+      "key_techniques": ["Wither Pass", "Golden Arm", "Venom Pass"],
+      "stats": [{"level": 1, "hp": 130, "speed": 59, "endurance": 6, "attack": 9, "pass": 11, "block": 5, "shot": 4, "catch": 1}]
+    },
+    {
+      "name": "Lulukan",
+      "location": "Kilika -- Beasts Locker room",
+      "starting_team": "Kilika Beasts",
+      "key_techniques": ["Nap Tackle", "Wither Shot", "Venom Tackle"],
+      "stats": [{"level": 1, "hp": 115, "speed": 63, "endurance": 5, "attack": 10, "pass": 6, "block": 8, "shot": 7, "catch": 1}]
+    },
+    {
+      "name": "Deim",
+      "location": "Kilika -- Beasts Locker room",
+      "starting_team": "Kilika Beasts",
+      "key_techniques": ["Anti-Nap", "Venom Pass", "Volley Shot"],
+      "stats": [{"level": 1, "hp": 110, "speed": 57, "endurance": 4, "attack": 8, "pass": 7, "block": 6, "shot": 3, "catch": 2}]
+    },
+    {
+      "name": "Nizarut",
+      "location": "Kilika -- Beasts Locker room",
+      "starting_team": "Kilika Beasts",
+      "key_techniques": ["Super Goalie", "Grip Gloves", "Anti-Drain"],
+      "stats": [{"level": 1, "hp": 190, "speed": 47, "endurance": 3, "attack": 5, "pass": 3, "block": 2, "shot": 1, "catch": 11}]
+    },
+    {
+      "name": "Eigaar",
+      "location": "Al Bhed -- Psyches Locker room",
+      "starting_team": "Al Bhed Psyches",
+      "key_techniques": ["Wither Tackle", "Venom Pass", "Nap Shot"],
+      "stats": [{"level": 1, "hp": 150, "speed": 66, "endurance": 8, "attack": 13, "pass": 7, "block": 7, "shot": 11, "catch": 2}]
+    },
+    {
+      "name": "Blappa",
+      "location": "Al Bhed -- Psyches Locker room",
+      "starting_team": "Al Bhed Psyches",
+      "key_techniques": ["Venom Shot", "Wither Tackle", "Tackle Slip"],
+      "stats": [{"level": 1, "hp": 130, "speed": 61, "endurance": 6, "attack": 9, "pass": 8, "block": 5, "shot": 8, "catch": 3}]
+    },
+    {
+      "name": "Berrik",
+      "location": "Al Bhed -- Psyches Locker room",
+      "starting_team": "Al Bhed Psyches",
+      "key_techniques": ["Nap Pass", "Venom Pass", "Golden Arm"],
+      "stats": [{"level": 1, "hp": 140, "speed": 64, "endurance": 7, "attack": 12, "pass": 10, "block": 6, "shot": 5, "catch": 3}]
+    },
+    {
+      "name": "Judda",
+      "location": "Al Bhed -- Psyches Locker room",
+      "starting_team": "Al Bhed Psyches",
+      "key_techniques": ["Nap Tackle", "Anti-Wither", "Venom Tackle"],
+      "stats": [{"level": 1, "hp": 120, "speed": 60, "endurance": 5, "attack": 10, "pass": 6, "block": 7, "shot": 3, "catch": 2}]
+    },
+    {
+      "name": "Lakkam",
+      "location": "Al Bhed -- Psyches Locker room",
+      "starting_team": "Al Bhed Psyches",
+      "key_techniques": ["Anti-Nap", "Venom Pass", "Volley Shot"],
+      "stats": [{"level": 1, "hp": 115, "speed": 56, "endurance": 4, "attack": 8, "pass": 7, "block": 5, "shot": 2, "catch": 1}]
+    },
+    {
+      "name": "Nimrook",
+      "location": "Al Bhed -- Psyches Locker room",
+      "starting_team": "Al Bhed Psyches",
+      "key_techniques": ["Super Goalie", "Grip Gloves", "Anti-Drain"],
+      "stats": [{"level": 1, "hp": 210, "speed": 52, "endurance": 3, "attack": 6, "pass": 5, "block": 4, "shot": 1, "catch": 14}]
+    },
+    {
+      "name": "Basik",
+      "location": "Mt. Gagazet -- Ronso Fangs Locker room",
+      "starting_team": "Ronso Fangs",
+      "key_techniques": ["Venom Tackle", "Wither Tackle", "Nap Tackle"],
+      "stats": [{"level": 1, "hp": 180, "speed": 40, "endurance": 10, "attack": 16, "pass": 6, "block": 10, "shot": 5, "catch": 2}]
+    },
+    {
+      "name": "Argai",
+      "location": "Mt. Gagazet -- Ronso Fangs Locker room",
+      "starting_team": "Ronso Fangs",
+      "key_techniques": ["Wither Shot", "Venom Pass", "Nap Shot"],
+      "stats": [{"level": 1, "hp": 170, "speed": 42, "endurance": 9, "attack": 12, "pass": 8, "block": 8, "shot": 7, "catch": 3}]
+    },
+    {
+      "name": "Gazna",
+      "location": "Mt. Gagazet -- Ronso Fangs Locker room",
+      "starting_team": "Ronso Fangs",
+      "key_techniques": ["Nap Tackle", "Venom Tackle", "Anti-Wither"],
+      "stats": [{"level": 1, "hp": 160, "speed": 45, "endurance": 8, "attack": 14, "pass": 5, "block": 9, "shot": 4, "catch": 1}]
+    },
+    {
+      "name": "Nuvy",
+      "location": "Mt. Gagazet -- Ronso Fangs Locker room",
+      "starting_team": "Ronso Fangs",
+      "key_techniques": ["Wither Tackle", "Venom Shot", "Anti-Nap"],
+      "stats": [{"level": 1, "hp": 150, "speed": 47, "endurance": 7, "attack": 15, "pass": 4, "block": 10, "shot": 6, "catch": 2}]
+    },
+    {
+      "name": "Irga",
+      "location": "Mt. Gagazet -- Ronso Fangs Locker room",
+      "starting_team": "Ronso Fangs",
+      "key_techniques": ["Nap Pass", "Venom Pass", "Volley Shot"],
+      "stats": [{"level": 1, "hp": 155, "speed": 46, "endurance": 8, "attack": 13, "pass": 7, "block": 11, "shot": 5, "catch": 2}]
+    },
+    {
+      "name": "Zamzi",
+      "location": "Mt. Gagazet -- Ronso Fangs Locker room",
+      "starting_team": "Ronso Fangs",
+      "key_techniques": ["Super Goalie", "Grip Gloves", "Anti-Drain"],
+      "stats": [{"level": 1, "hp": 225, "speed": 38, "endurance": 5, "attack": 6, "pass": 3, "block": 3, "shot": 1, "catch": 15}]
+    },
+    {
+      "name": "Giera",
+      "location": "Guadosalam -- Glories Locker room",
+      "starting_team": "Guado Glories",
+      "key_techniques": ["Venom Tackle", "Wither Pass", "Nap Shot"],
+      "stats": [{"level": 1, "hp": 130, "speed": 70, "endurance": 6, "attack": 9, "pass": 10, "block": 4, "shot": 12, "catch": 1}]
+    },
+    {
+      "name": "Zazi",
+      "location": "Guadosalam -- Glories Locker room",
+      "starting_team": "Guado Glories",
+      "key_techniques": ["Wither Tackle", "Venom Shot", "Golden Arm"],
+      "stats": [{"level": 1, "hp": 125, "speed": 72, "endurance": 7, "attack": 11, "pass": 9, "block": 5, "shot": 10, "catch": 3}]
+    },
+    {
+      "name": "Navara",
+      "location": "Guadosalam -- Glories Locker room",
+      "starting_team": "Guado Glories",
+      "key_techniques": ["Nap Tackle", "Wither Shot", "Anti-Nap"],
+      "stats": [{"level": 1, "hp": 110, "speed": 68, "endurance": 5, "attack": 8, "pass": 7, "block": 3, "shot": 9, "catch": 1}]
+    },
+    {
+      "name": "Auda",
+      "location": "Guadosalam -- Glories Locker room",
+      "starting_team": "Guado Glories",
+      "key_techniques": ["Anti-Drain", "Venom Pass", "Volley Shot"],
+      "stats": [{"level": 1, "hp": 135, "speed": 73, "endurance": 8, "attack": 13, "pass": 8, "block": 6, "shot": 11, "catch": 2}]
+    },
+    {
+      "name": "Pah",
+      "location": "Guadosalam -- Glories Locker room",
+      "starting_team": "Guado Glories",
+      "key_techniques": ["Nap Pass", "Venom Tackle", "Tackle Slip"],
+      "stats": [{"level": 1, "hp": 120, "speed": 69, "endurance": 4, "attack": 10, "pass": 5, "block": 7, "shot": 8, "catch": 1}]
+    },
+    {
+      "name": "Noy",
+      "location": "Guadosalam -- Glories Locker room",
+      "starting_team": "Guado Glories",
+      "key_techniques": ["Super Goalie", "Grip Gloves", "Anti-Drain"],
+      "stats": [{"level": 1, "hp": 180, "speed": 60, "endurance": 3, "attack": 6, "pass": 3, "block": 2, "shot": 1, "catch": 13}]
+    },
+    {
+      "name": "Brother",
+      "location": "Airship -- Free Agent Room",
+      "starting_team": "Free Agent",
+      "key_techniques": ["Wither Tackle", "Nap Pass", "Golden Arm"],
+      "stats": [{"level": 1, "hp": 160, "speed": 75, "endurance": 10, "attack": 14, "pass": 12, "block": 8, "shot": 9, "catch": 3}]
+    },
+    {
+      "name": "Wedge",
+      "location": "Luca -- Stadium Entrance",
+      "starting_team": "Free Agent",
+      "key_techniques": ["Nap Shot", "Wither Pass", "Volley Shot"],
+      "stats": [{"level": 1, "hp": 155, "speed": 74, "endurance": 8, "attack": 13, "pass": 10, "block": 6, "shot": 11, "catch": 2}]
+    },
+    {
+      "name": "Kiyuri",
+      "location": "Macalania -- Free Agent Room",
+      "starting_team": "Free Agent",
+      "key_techniques": ["Venom Tackle", "Wither Tackle", "Tackle Slip"],
+      "stats": [{"level": 1, "hp": 140, "speed": 70, "endurance": 7, "attack": 12, "pass": 9, "block": 5, "shot": 7, "catch": 3}]
+    },
+    {
+      "name": "Kyou",
+      "location": "Bevelle -- Free Agent Room",
+      "starting_team": "Free Agent",
+      "key_techniques": ["Nap Shot", "Venom Pass", "Anti-Wither"],
+      "stats": [{"level": 1, "hp": 145, "speed": 72, "endurance": 8, "attack": 11, "pass": 8, "block": 4, "shot": 10, "catch": 1}]
+    },
+    {
+      "name": "Zalitz",
+      "location": "Calm Lands -- Free Agent Tent",
+      "starting_team": "Free Agent",
+      "key_techniques": ["Wither Pass", "Venom Tackle", "Nap Tackle"],
+      "stats": [{"level": 1, "hp": 120, "speed": 69, "endurance": 5, "attack": 10, "pass": 6, "block": 7, "shot": 5, "catch": 1}]
+    },
+    {
+      "name": "Shaami",
+      "location": "Luca -- Stadium Entrance",
+      "starting_team": "Free Agent",
+      "key_techniques": ["Venom Shot", "Nap Tackle", "Volley Shot"],
+      "stats": [{"level": 1, "hp": 135, "speed": 68, "endurance": 7, "attack": 9, "pass": 8, "block": 3, "shot": 8, "catch": 2}]
+    },
+    {
+      "name": "Shuu",
+      "location": "Besaid Island -- Free Agent Hut",
+      "starting_team": "Free Agent",
+      "key_techniques": ["Nap Shot", "Venom Pass", "Golden Arm"],
+      "stats": [{"level": 1, "hp": 140, "speed": 73, "endurance": 8, "attack": 10, "pass": 11, "block": 5, "shot": 9, "catch": 3}]
+    },
+    {
+      "name": "Jumal",
+      "location": "Luca -- Stadium Entrance",
+      "starting_team": "Free Agent",
+      "key_techniques": ["Wither Tackle", "Grip Gloves", "Anti-Nap"],
+      "stats": [{"level": 1, "hp": 150, "speed": 65, "endurance": 6, "attack": 8, "pass": 9, "block": 7, "shot": 4, "catch": 2}]
+    },
+    {
+      "name": "Svanda",
+      "location": "Kilika -- Free Agent Dock",
+      "starting_team": "Free Agent",
+      "key_techniques": ["Venom Tackle", "Wither Pass", "Tackle Slip"],
+      "stats": [{"level": 1, "hp": 125, "speed": 67, "endurance": 5, "attack": 12, "pass": 5, "block": 6, "shot": 6, "catch": 1}]
+    },
+    {
+      "name": "Zev",
+      "location": "Luca -- Stadium Entrance",
+      "starting_team": "Free Agent",
+      "key_techniques": ["Nap Shot", "Venom Pass", "Wither Tackle"],
+      "stats": [{"level": 1, "hp": 145, "speed": 64, "endurance": 9, "attack": 11, "pass": 6, "block": 8, "shot": 7, "catch": 2}]
+    },
+    {
+      "name": "Tatts",
+      "location": "Guadosalam -- Free Agent Inn",
+      "starting_team": "Free Agent",
+      "key_techniques": ["Venom Pass", "Wither Shot", "Anti-Nap"],
+      "stats": [{"level": 1, "hp": 130, "speed": 70, "endurance": 6, "attack": 7, "pass": 10, "block": 5, "shot": 12, "catch": 1}]
+    },
+    {
+      "name": "Durren",
+      "location": "Besaid Island -- Free Agent Hut",
+      "starting_team": "Free Agent",
+      "key_techniques": ["Wither Tackle", "Venom Shot", "Anti-Wither"],
+      "stats": [{"level": 1, "hp": 125, "speed": 72, "endurance": 5, "attack": 9, "pass": 8, "block": 4, "shot": 11, "catch": 1}]
+    },
+    {
+      "name": "Nedus",
+      "location": "Besaid Island -- Free Agent Hut",
+      "starting_team": "Free Agent",
+      "key_techniques": ["Wither Tackle", "Venom Shot", "Anti-Wither"],
+      "stats": [{"level": 1, "hp": 125, "speed": 72, "endurance": 5, "attack": 9, "pass": 8, "block": 4, "shot": 11, "catch": 1}]
+    },
+    {
+      "name": "Naida",
+      "location": "Besaid Island -- Free Agent Hut",
+      "starting_team": "Free Agent",
+      "key_techniques": ["Wither Tackle", "Venom Shot", "Anti-Wither"],
+      "stats": [{"level": 1, "hp": 125, "speed": 72, "endurance": 5, "attack": 9, "pass": 8, "block": 4, "shot": 11, "catch": 1}]
+    },
+    {
+      "name": "Biggs",
+      "location": "Besaid Island -- Free Agent Hut",
+      "starting_team": "Free Agent",
+      "key_techniques": ["Wither Tackle", "Venom Shot", "Anti-Wither"],
+      "stats": [{"level": 1, "hp": 125, "speed": 72, "endurance": 5, "attack": 9, "pass": 8, "block": 4, "shot": 11, "catch": 1}]
+    },
+    {
+      "name": "Vilucha",
+      "location": "Besaid Island -- Free Agent Hut",
+      "starting_team": "Free Agent",
+      "key_techniques": ["Wither Tackle", "Venom Shot", "Anti-Wither"],
+      "stats": [{"level": 1, "hp": 125, "speed": 72, "endurance": 5, "attack": 9, "pass": 8, "block": 4, "shot": 11, "catch": 1}]
+    },
+    {
+      "name": "Mifurey",
+      "location": "Thunder Plains -- Travel Agency",
+      "starting_team": "Free Agent",
+      "key_techniques": ["Venom Shot", "Nap Tackle", "Volley Shot"],
+      "stats": [{"level": 1, "hp": 135, "speed": 68, "endurance": 7, "attack": 9, "pass": 8, "block": 3, "shot": 8, "catch": 2}]
+    },
+    {
+      "name": "Miyu",
+      "location": "Moonflow -- North Shoopuf Wharf",
+      "starting_team": "Free Agent",
+      "key_techniques": ["Nap Shot", "Venom Pass", "Golden Arm"],
+      "stats": [{"level": 1, "hp": 140, "speed": 73, "endurance": 8, "attack": 10, "pass": 11, "block": 5, "shot": 9, "catch": 3}]
+    },
+    {
+      "name": "Mep",
+      "location": "Kilika Temple",
+      "starting_team": "Free Agent",
+      "key_techniques": ["Wither Tackle", "Grip Gloves", "Anti-Nap"],
+      "stats": [{"level": 1, "hp": 150, "speed": 65, "endurance": 6, "attack": 8, "pass": 9, "block": 7, "shot": 4, "catch": 2}]
+    },
+    {
+      "name": "Yuma",
+      "location": "Guadosalam -- House",
+      "starting_team": "Free Agent",
+      "key_techniques": ["Venom Tackle", "Wither Pass", "Tackle Slip"],
+      "stats": [{"level": 1, "hp": 125, "speed": 67, "endurance": 5, "attack": 12, "pass": 5, "block": 6, "shot": 6, "catch": 1}]
+    },
+    {
+      "name": "Linna",
+      "location": "Macalania Temple -- Frozen Road",
+      "starting_team": "Free Agent",
+      "key_techniques": ["Nap Shot", "Venom Pass", "Wither Tackle"],
+      "stats": [{"level": 1, "hp": 145, "speed": 64, "endurance": 9, "attack": 11, "pass": 6, "block": 8, "shot": 7, "catch": 2}]
+    },
+    {
+      "name": "Rin",
+      "location": "Airship -- Corridor",
+      "starting_team": "Free Agent",
+      "key_techniques": ["Venom Pass", "Wither Shot", "Anti-Nap"],
+      "stats": [{"level": 1, "hp": 130, "speed": 70, "endurance": 6, "attack": 7, "pass": 10, "block": 5, "shot": 12, "catch": 1}]
+    },
+    {
+      "name": "Ropp",
+      "location": "Mi'ihen Highroad -- Travel Agency",
+      "starting_team": "Free Agent",
+      "key_techniques": ["Venom Tackle", "Wither Pass", "Tackle Slip"],
+      "stats": [{"level": 1, "hp": 125, "speed": 67, "endurance": 5, "attack": 12, "pass": 5, "block": 6, "shot": 6, "catch": 1}]
+    },
+    {
+      "name": "Wakka",
+      "location": "Airship -- Bridge",
+      "starting_team": "Free Agent",
+      "key_techniques": ["Wither Shot", "Drain Tackle", "Tackle Slip"],
+      "stats": [{"level": 1, "hp": 145, "speed": 64, "endurance": 9, "attack": 11, "pass": 6, "block": 8, "shot": 7, "catch": 2}]
+    }
+  ]
+}

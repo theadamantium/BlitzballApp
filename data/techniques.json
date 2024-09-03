@@ -1,0 +1,371 @@
+{
+    "techniques": [
+      {
+        "technique_name": "Anti-Drain",
+        "hp_cost": "10",
+        "chance": "50%",
+        "description": "Prevents HP Drain"
+      },
+      {
+        "technique_name": "Anti-Drain 2",
+        "hp_cost": "50",
+        "chance": "100%",
+        "description": "Prevents HP Drain"
+      },
+      {
+        "technique_name": "Anti-Nap",
+        "hp_cost": "40",
+        "chance": "50%",
+        "description": "Blocks sleep"
+      },
+      {
+        "technique_name": "Anti-Nap 2",
+        "hp_cost": "210",
+        "chance": "100%",
+        "description": "Blocks sleep"
+      },
+      {
+        "technique_name": "Anti-Venom",
+        "hp_cost": "5",
+        "chance": "50%",
+        "description": "Blocks poison"
+      },
+      {
+        "technique_name": "Anti-Venom 2",
+        "hp_cost": "50",
+        "chance": "100%",
+        "description": "Blocks poison"
+      },
+      {
+        "technique_name": "Anti-Wither",
+        "hp_cost": "30",
+        "chance": "50%",
+        "description": "Prevents stat reduction"
+      },
+      {
+        "technique_name": "Anti-Wither 2",
+        "hp_cost": "200",
+        "chance": "100%",
+        "description": "Prevents stat reduction"
+      },
+      {
+        "technique_name": "Aurochs Spirit",
+        "hp_cost": "600",
+        "chance": "n/a",
+        "description": "SH+10, Sum of original Aurochs' SH on team added to Wakka's!"
+      },
+      {
+        "technique_name": "Brawler",
+        "hp_cost": "10",
+        "chance": "60%",
+        "description": "Participate in encounters from farther away"
+      },
+      {
+        "technique_name": "Drain Tackle",
+        "hp_cost": "see decription",
+        "chance": "40%",
+        "description": "AT+0, Absorb 30 HP, Own HP must be over 30"
+      },
+      {
+        "technique_name": "Drain Tackle 2",
+        "hp_cost": "see decription",
+        "chance": "70%",
+        "description": "AT+0, Absorb 150 HP, Own HP must be over 150"
+      },
+      {
+        "technique_name": "Drain Tackle 3",
+        "hp_cost": "see decription",
+        "chance": "100%",
+        "description": "AT+0, Absorb 500 HP, Own HP must be over 500"
+      },
+      {
+        "technique_name": "Elite Defense",
+        "hp_cost": "5 (equip)",
+        "chance": "n/a",
+        "description": "Find and intercept ball carrier from farther away"
+      },
+      {
+        "technique_name": "Gamble",
+        "hp_cost": "300",
+        "chance": "50%",
+        "description": "Stat randomized after waking. [Press 'X' to select]"
+      },
+      {
+        "technique_name": "Golden Arm",
+        "hp_cost": "30 (equip)",
+        "chance": "n/a",
+        "description": "AT+0, Slows SH & PA decrease during passes and shots"
+      },
+      {
+        "technique_name": "Good Morning!",
+        "hp_cost": "80",
+        "chance": "50%",
+        "description": "Powers up player after waking from sleep"
+      },
+      {
+        "technique_name": "Grip Gloves",
+        "hp_cost": "30",
+        "chance": "n/a",
+        "description": "Raises goalkeeper's ball control ability"
+      },
+      {
+        "technique_name": "Hi-Risk",
+        "hp_cost": "300 (equip)",
+        "chance": "n/a",
+        "description": "Lowers all stats to 1/2 but doubles experience points"
+      },
+      {
+        "technique_name": "Invisible Shot",
+        "hp_cost": "220",
+        "chance": "60%",
+        "description": "SH+3, Ball disappears on way to goal [Control with left stick]"
+      },
+      {
+        "technique_name": "Jecht Shot",
+        "hp_cost": "120",
+        "chance": "60%",
+        "description": "SH+5, Knocks away up to 2 opposing players"
+      },
+      {
+        "technique_name": "Jecht Shot 2",
+        "hp_cost": "999",
+        "chance": "n/a",
+        "description": "SH+10, Invisible Shot, Knocks away 3 opposing players!"
+      },
+      {
+        "technique_name": "Nap Pass",
+        "hp_cost": "40",
+        "chance": "30%",
+        "description": "PA+3, Puts opponents to sleep"
+      },
+      {
+        "technique_name": "Nap Pass 2",
+        "hp_cost": "200",
+        "chance": "60%",
+        "description": "PA+5, Puts opponents to sleep"
+      },
+      {
+        "technique_name": "Nap Pass 3",
+        "hp_cost": "510",
+        "chance": "100%",
+        "description": "PA+7, Puts opponents to sleep"
+      },
+      {
+        "technique_name": "Nap Shot",
+        "hp_cost": "45",
+        "chance": "40%",
+        "description": "SH+3, Puts goalkeeper to sleep"
+      },
+      {
+        "technique_name": "Nap Shot 2",
+        "hp_cost": "80",
+        "chance": "70%",
+        "description": "SH+5, Puts goalkeeper to sleep"
+      },
+      {
+        "technique_name": "Nap Shot 3",
+        "hp_cost": "350",
+        "chance": "100%",
+        "description": "SH+7, Puts goalkeeper to sleep"
+      },
+      {
+        "technique_name": "Nap Tackle",
+        "hp_cost": "40",
+        "chance": "100%",
+        "description": "AT+3, Puts target to sleep if EN is reduced to 0"
+      },
+      {
+        "technique_name": "Nap Tackle 2",
+        "hp_cost": "90",
+        "chance": "100%",
+        "description": "AT+5, Puts target to sleep if EN is reduced to 0"
+      },
+      {
+        "technique_name": "Nap Tackle 3",
+        "hp_cost": "180",
+        "chance": "100%",
+        "description": "AT+7, Puts target to sleep if EN is reduced to 0"
+      },
+      {
+        "technique_name": "Pile Venom",
+        "hp_cost": "30 (equip)",
+        "chance": "n/a",
+        "description": "Cumulate poison effects"
+      },
+      {
+        "technique_name": "Pile Wither",
+        "hp_cost": "70 (equip)",
+        "chance": "n/a",
+        "description": "Cumulate the effects of stat-lowering techniques"
+      },
+      {
+        "technique_name": "Regen",
+        "hp_cost": "50 (equip)",
+        "chance": "n/a",
+        "description": "Speeds up HP recovery when not carrying the ball"
+      },
+      {
+        "technique_name": "Sphere Shot",
+        "hp_cost": "90",
+        "chance": "n/a",
+        "description": "SH+3, Adds random amount to SH [Press 'X' to select]"
+      },
+      {
+        "technique_name": "Spin Ball",
+        "hp_cost": "30",
+        "chance": "n/a",
+        "description": "Puts spin on the ball, harder for goal keeper to catch"
+      },
+      {
+        "technique_name": "Super Goalie",
+        "hp_cost": "30+",
+        "chance": "60%",
+        "description": "Adds random amount to CA [Press 'X' to select]"
+      },
+      {
+        "technique_name": "Tackle Slip",
+        "hp_cost": "40",
+        "chance": "40%",
+        "description": "Evade tackles, Player may be disoriented after evading"
+      },
+      {
+        "technique_name": "Tackle Slip 2",
+        "hp_cost": "170",
+        "chance": "80%",
+        "description": "Evade tackles, Player may be disoriented after evading"
+      },
+      {
+        "technique_name": "Tech Find",
+        "hp_cost": "n/a",
+        "chance": "prize",
+        "description": "Unlocks almost any slot in a character's skill list"
+      },
+      {
+        "technique_name": "Venom Pass",
+        "hp_cost": "40",
+        "chance": "30%",
+        "description": "PA+3, Poisons opponents"
+      },
+      {
+        "technique_name": "Venom Pass 2",
+        "hp_cost": "120",
+        "chance": "60%",
+        "description": "PA+5, Poisons opponents"
+      },
+      {
+        "technique_name": "Venom Pass 3",
+        "hp_cost": "250",
+        "chance": "100%",
+        "description": "PA+7, Poisons opponents"
+      },
+      {
+        "technique_name": "Venom Shot",
+        "hp_cost": "20",
+        "chance": "40%",
+        "description": "SH+3, Poisons goalkeeper"
+      },
+      {
+        "technique_name": "Venom Shot 2",
+        "hp_cost": "35",
+        "chance": "70%",
+        "description": "SH+5, Poisons goalkeeper"
+      },
+      {
+        "technique_name": "Venom Shot 3",
+        "hp_cost": "100",
+        "chance": "100%",
+        "description": "SH+7, Poisons goalkeeper"
+      },
+      {
+        "technique_name": "Venom Tackle",
+        "hp_cost": "30",
+        "chance": "40%",
+        "description": "AT+3, Inflicts poison"
+      },
+      {
+        "technique_name": "Venom Tackle 2",
+        "hp_cost": "70",
+        "chance": "70%",
+        "description": "AT+5, Inflicts poison"
+      },
+      {
+        "technique_name": "Venom Tackle 3",
+        "hp_cost": "160",
+        "chance": "100%",
+        "description": "AT+7, Inflicts poison"
+      },
+      {
+        "technique_name": "Volley Shot",
+        "hp_cost": "10",
+        "chance": "50%",
+        "description": "Player can shoot free balls unblocked"
+      },
+      {
+        "technique_name": "Volley Shot 2",
+        "hp_cost": "40",
+        "chance": "75%",
+        "description": "Player can shoot free balls unblocked"
+      },
+      {
+        "technique_name": "Volley Shot 3",
+        "hp_cost": "250",
+        "chance": "100%",
+        "description": "Player can shoot free balls unblocked"
+      },
+      {
+        "technique_name": "Wither Pass",
+        "hp_cost": "40",
+        "chance": "30%",
+        "description": "PA+3, Lowers opponents' EN, AT, and BL"
+      },
+      {
+        "technique_name": "Wither Pass 2",
+        "hp_cost": "180",
+        "chance": "60%",
+        "description": "PA+5, Lowers opponents' EN, AT, and BL"
+      },
+      {
+        "technique_name": "Wither Pass 3",
+        "hp_cost": "440",
+        "chance": "100%",
+        "description": "PA+7, Lowers opponents' EN, AT, and BL"
+      },
+      {
+        "technique_name": "Wither Shot",
+        "hp_cost": "30",
+        "chance": "40%",
+        "description": "SH+3, Lowers goalkeeper's BL and CA"
+      },
+      {
+        "technique_name": "Wither Shot 2",
+        "hp_cost": "180",
+        "chance": "70%",
+        "description": "SH+5, Lowers goalkeeper's BL and CA"
+      },
+      {
+        "technique_name": "Wither Shot 3",
+        "hp_cost": "390",
+        "chance": "100%",
+        "description": "SH+7, Lowers goalkeeper's BL and CA"
+      },
+      {
+        "technique_name": "Wither Tackle",
+        "hp_cost": "8",
+        "chance": "40%",
+        "description": "AT+3, Lowers targets' EN, PA, and SH"
+      },
+      {
+        "technique_name": "Wither Tackle 2",
+        "hp_cost": "80",
+        "chance": "70%",
+        "description": "AT+5, Lowers targets' EN, PA, and SH"
+      },
+      {
+        "technique_name": "Wither Tackle 3",
+        "hp_cost": "250",
+        "chance": "100%",
+        "description": "AT+7, Lowers targets' EN, PA, and SH"
+      }
+    ]
+  }
+  
